@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>...</title>
+        <link rel="icon" href="data:;base64,=">
+        <!--<script src="js/check.js"></script>-->
+        <script src="js/jquery-3.3.1.min.js"></script>
+        <script src="js/utils.js"></script>
+        <script src="js/config.js"></script>
+        <script src="js/http.js"></script>
+        <script src="js/wxShare.js"></script>
+    </head>
+<body>
+    <script>
+        // 入口-->落地
+        $post("/proxy/get_proxy",{type:2},{Appid:videoAppid},function(res){
+            if(res.result===1){
+                location.href = res.data.address+"/web/index.html?fuid="+getUrlParam("fuid");
+            }else{
+                location.href = "error.html"
+            }
+        });
+    </script>
+    </body>
+</html>

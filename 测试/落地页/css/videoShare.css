@@ -1,0 +1,88 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+ul,
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+html {
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    height: 100%;
+    font-family: "Adobe 黑体 Std R";
+    overflow: hidden;
+    background: #f3f3f3;
+    position: relative;
+}
+
+#wxTitle{
+    width:100%;height:100rem;z-index: -1; text-align: center; padding-top: 0.3rem;line-height: 1.2rem; color: #AAA; font-size: 0.54rem; display: block;
+}
+#first{
+    position:absolute;left:0;top:0;width:100%;height:100vh;
+}
+.back{
+    background-color: #e6e5e8;width:100%;font-size: 0.6rem;padding:0.3rem 0 0.3rem 0.1rem;box-sizing: border-box;
+}
+
+.wrap {
+    padding: 0.6rem;
+    overflow: hidden;
+    height:100%;
+    display: block;
+    position: relative;
+    background-color: #000;
+}
+#mask{
+    width:100%;height:300%;background-color: rgba(0,0,0,0.8);position: absolute;top:0;left:0;z-index: 99999;
+}
+#mask-bg{
+    width:100%;height:100vh;position:relative;
+}
+#modal{
+    width:80%;height:6.5rem;background-color: #fff;z-index: 10000;position: absolute;top:40vh;left:10%;text-align: center;display: block;
+}
+#modal-content{
+    width:100%;height:5rem;box-sizing: border-box;
+    padding: 0.8rem 1rem;font-size: 0.7rem;
+    line-height: 1.2rem;
+}
+#ok{
+    width:100%;height:1.5rem;line-height: 1.5rem;border-top:2px solid #ddd;box-sizing: border-box;color:#2ca247;font-size: 0.7rem;
+}
+.wrap .video {
+    overflow: hidden;
+    width:100%;height:8rem;position:relative;margin-top: 24vh;background-color: #000;
+}
+
+.wrap .video video{
+    width: 100%;
+    height: 100%;
+}
+.video #poster{
+    margin:0 auto;width:116px;height:8rem;background:url('http://vpic.video.qq.com/27525669/l07355rsi7p.png') no-repeat center center;background-size: cover;
+}
+.video #playBtn{
+    display:block;width:2rem;height:2rem;position:absolute;top:3rem;left:-1rem;margin-left: 50%;
+}
+
+
+.shareHand{
+    width:15rem;height:5rem;position:absolute;top:0;right:0.3rem;
+}
+.shareRed{
+    color:#f33a23;
+}
+.shareTipBox{
+    width:100%;color:#FCFCFC;text-align: center;position:absolute;top:25vh;font-size: 0.84rem;font-weight: bold;letter-spacing: 0.04rem
+}
+.shareTip{
+    line-height: 1.5rem;
+}

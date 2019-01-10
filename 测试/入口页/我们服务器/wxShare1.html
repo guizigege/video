@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>...</title>
+    <link rel="icon" href="data:;base64,=">
+    <link rel="stylesheet" href="css/videoShare.css">
+    <script src="js/config.js"></script>
+    <script src="js/rem.js"></script>
+    <script src="js/jweixin-1.0.0.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="http://ip.ws.126.net/ipquery"></script>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = baidu;
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+        _hmt.push(['_setAutoPageview', false]);
+    </script>
+</head>
+<body>
+<div id="first" >
+    <div class="wrap">
+        <div id="mask">
+            <img src="./images/hand2.jpg" class="shareHand">
+            <div class="shareTipBox">
+                <div class="shareTip">选择菜单“<span class="shareRed">分享到朋友圈</span>”</div>
+                <div class="shareTip">公开分享到朋友圈即可<span class="shareRed">播放完整正片!</span></div>
+            </div>
+            <div id="modal">
+                <div id="modal-content" style="padding:1.5rem 0.5rem">应视频版权要求，请分享到<span class="shareRed">朋友圈</span>即可继续观看</div>
+                <div id="ok">好的</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="js/http.js"></script>
+<script src="js/utils.js"></script>
+
+<script>
+    let myUid = getUrlParam("uid");
+    let isLogin = getUrlParam("login");
+    sessionStorage.setItem("uid",myUid);
+    sessionStorage.setItem("isLogin",isLogin);
+</script>
+<script src="js/wxShare.js"></script>
+<script>
+    if(!isLogin){
+        location.href = "entry.html";
+    }else{
+        _hmt.push(['_trackPageview', '/wxShare1']);
+        banMove();
+        wxShare("wxShare2.html?login="+isLogin+"&uid="+myUid,"quan");
+        modalHandle();
+        windowBack("分享1","wxShare1.html?login="+isLogin+"&uid="+myUid,"entry.html");
+    }
+</script>
+</body>
+</html>
